@@ -118,15 +118,15 @@ public:
         other.reset();
     }
 
-    T& operator*(){
+    T& operator*() const{
         return *storedPtr;
     }
 
-    T* operator->(){
+    T* operator->() const{
         return storedPtr;
     }
 
-    T* get(){
+    T* get() const{
         return storedPtr;
     }
 
@@ -134,7 +134,7 @@ public:
         return storedPtr == other.storedPtr;
     }
 
-    operator bool(){
+    operator bool() const{
         return storedPtr != nullptr;
     }
 
